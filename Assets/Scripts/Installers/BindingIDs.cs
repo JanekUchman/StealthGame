@@ -7,5 +7,6 @@ namespace Installers
         public const string SprintInput = nameof(SprintInput);
         public const string MovementInput = nameof(MovementInput);
         public const string LookInput = nameof(LookInput);
+        public const string PlayerTransform = nameof(PlayerTransform);
     }
 }

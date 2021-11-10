@@ -1,19 +1,21 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Zenject;
 
 namespace Movement
 {
-    public class CoverMovementModel : IInitializable, IDisposable
+    public class CoverMovementModel : MovementModel
     {
-        public void Initialize()
+        public CoverMovementModel(float walkMoveSpeed, float sprintMoveSpeed, float crouchMoveSpeed) : base(walkMoveSpeed, sprintMoveSpeed, crouchMoveSpeed)
         {
-            throw new NotImplementedException();
         }
 
-        public void Dispose()
+        public override Vector2 GetMovement(Vector2 input)
         {
-            throw new NotImplementedException();
+            var movement = input;
+            movement.x = 0;
+            return movement * moveSpeed;
         }
     }
 }
